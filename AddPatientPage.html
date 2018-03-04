@@ -2,16 +2,43 @@
     <head>
         <title>Add Patient</title>
         <link rel = "stylesheet" type="text/css" href="AddPatient.css">
+        <script src = "addPatientJs.js"></script>
     </head>
     <body>
-        <h1>Medical Follow-up</h1>
-        <div style = "text-align:center;">
-            <form action = "AddPatientPage.html">
-                <button id = "addPatient">Add a New Patient</button>
-            </form>
-            <form action = "SearchPage.html">
-                <button id = "searchPatient">Search for an Existing Patient</button>
-            </form>
+        <h1>Add New Patient</h1>
+        <div>
+            <label>Patient Name: </label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="name" id="patientName">
+        </div>
+        <div>
+            <label>Date of Birth(MM/DD/YYYY)</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="DOB" id="DOB">
+        </div>
+        <div>
+            <label>Address</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="Address" id="Address">
+        </div>
+        <div>
+            <label>Patient Phone Number(###-###-####)</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="PhoneNumber" id="PhoneNumber">
+        </div>
+        <div>
+            <label>Health Concerns</label>
+            <textarea onclick = "revertErrorHandling(this)" name="HealthConcerns" id="HealthConcerns"></textarea>
+        </div>
+        <div>
+            <label>Medications Taken</label>
+            <textarea onclick = "revertErrorHandling(this)" name="Medication" id="Medications"></textarea>
+        </div>
+        <div>
+            <h4>Emergency Contact</h4>
+            <label>Name</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" id = "emergencyName">
+            <label>Phone Number</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" id = "emergencyNumber">
+        </div>
+        <div>
+            <button onclick = "submit()" id = "followUpButton">Submit and Proceed to Follow Up</button>
         </div>
     </body>
 </html>
