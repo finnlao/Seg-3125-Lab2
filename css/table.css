@@ -149,10 +149,7 @@ th, td {
 }
 
 
-/
 
-/*==================================================================
-[ Ver5 ]*/
 .tables.ver5 tbody tr:nth-child(even) {
   background-color: #e9faff;
 }
