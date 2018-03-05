@@ -18,18 +18,37 @@ function submit(){
     var errorMessage = "";
 
     var phoneRegex = /([0-9]){3}-([0-9]){3}-([0-9]){4}$/;
+    var nameRegex = /([A-Za-z\-])$/;
+    var DOBRegex = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
 
 
     if(patientName.value == "" || patientName.style.color == "red"){
         patientName.style.color = "red";
         patientName.value = "Required";
         errorMessage += "Patient Name is empty \n";
+    } else if (!patientName.value.match(nameRegex)){
+        errorMessage += "Inappropriate characters/symbols in the Patient's name \n";
     }
 
     if(DOB.value == "" || DOB.style.color == "red"){
         DOB.style.color = "red";
         DOB.value = "Required";
         errorMessage += "Date of Birth is empty \n";
+    } else if(!DOB.value.match(DOBRegex)){
+        errorMessage += "Incorrect Formatting for Date of Birth \n";
+    } else {
+        var dateOfBirth = DOB.value.split("/");
+        if(parseInt(dateOfBirth[0])> 12 || parseInt(dateOfBirth[0]) < 1){
+            errorMessage += "Invalid Month entered for Date of Birth \n"
+        }
+
+        if(parseInt(dateOfBirth[1]) > 31 || parseInt(dateOfBirth[1]) < 1){
+            errorMessage += "Invalid Day entered for Date of Birth \n";
+        }
+
+        if(parseInt(dateOfBirth[2]) < 1 || parseInt(dateOfBirth[2]) > 2018){
+            errorMessage += "Invalid Year entered for Date of Birth \n";
+        }
     }
 
     if(Address.value == "" || Address.style.color == "red"){
@@ -62,6 +81,8 @@ function submit(){
         emergencyName.style.color = "red";
         emergencyName.value = "Required";
         errorMessage += "Emergency Contact Name is empty\n";
+    } else if (!emergencyName.value.match(nameRegex)){
+        errorMessage += "Inappropriate characters/symbols in the Emergency Contact's name \n";
     }
 
     if(emergencyPhone.value == "" || emergencyPhone.style.color == "red"){

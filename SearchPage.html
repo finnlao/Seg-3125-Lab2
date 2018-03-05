@@ -1,3 +1,21 @@
 <html>
-
+    <head>
+        <title>Search for Patient</title>
+        <link rel = "stylesheet" type="text/css" href="">
+        <script src = "searchPageJs.js"></script>
+    </head>
+    <body>
+        <h1>Search for Existing Patient</h1>
+        <div>
+            <label>Patient Name: </label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="name" id="patientName">
+        </div>
+        <div>
+            <label>Date of Birth(MM/DD/YYYY)</label>
+            <input onclick = "revertErrorHandling(this)" type = "text" name="DOB" id="DOB">
+        </div>
+        
+        <button onclick = "submit()" id = "searchPatient">Search for an Existing Patient</button>
+        
+    </body>
 </html>
