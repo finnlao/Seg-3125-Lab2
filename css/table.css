@@ -148,8 +148,6 @@ th, td {
   padding-bottom: 14px;
 }
 
-
-
 .tables.ver5 tbody tr:nth-child(even) {
   background-color: #e9faff;
 }
@@ -175,7 +173,6 @@ th, td {
 .tables.ver5 .rows:hover td {
   color: #fe3e64;
 }
-
 
 .tables.ver5 .hov-column-ver5::before {
   content: "";
