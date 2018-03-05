@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Patient</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="lib/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="lib/noui/nouislider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src = "javascript/addPatientJs.js"></script>
+</head>
+<body>
+
+
+<div class="container-followup">
+    <div class="wrap-followup">
+        <form class="followup-form validate-form">
+				<span class="followup-form-title">
+					Add Patient
+				</span>
+            <div class="wrap-inputs validate-input bg1" data-validate="Please Type Patient Name">
+                <span class="label-inputs">FULL NAME *</span>
+                <input class="inputs" type="name2" id="patientName" name="name2" placeholder="Enter Your Name">
+            </div>
+            <div class="wrap-inputs validate-input bg1" data-validate="Please Type Your DOB">
+                <span class="label-inputs">Date of Birth *</span>
+                <input class="inputs" id="DOB" type="DOB" name="name" placeholder="(MM/DD/YY)">
+            </div>
+            <div class="wrap-inputs validate-input bg1" data-validate="Please Type Your Address">
+                <span class="label-inputs">Address *</span>
+                <input class="inputs" id="Address" type="text" name="name" placeholder="Enter Address">
+            </div>
+            <div class="wrap-inputs validate-input bg1" data-validate="Please Type Patient Phone Number">
+                <span class="label-inputs">Phone Number *</span>
+                <input class="inputs" id="PhoneNumber" type="PhoneNumber" name="PhoneNumber" placeholder="###-###-####">
+            </div>
+            <div class="wrap-inputs validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+                <span class="label-inputs">Health Concerns</span>
+                <textarea class="inputs" id="HealthConcerns" name="message" placeholder="Health Concerns here..."></textarea>
+            </div>
+
+            <div class="wrap-inputs validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+                <span class="label-inputs">Medications Taken</span>
+                <textarea class="inputs" id="Medications" name="message" placeholder="Please list Medications"></textarea>
+            </div>
+
+            <div class="wrap-inputs validate-input bg1 rs1-wrap-inputs" data-validate = "Emergency Contact Name)">
+                <span class="label-inputs">Emergency Contact Name *</span>
+                <input class="inputs" id="emergencyName" type="Name" name="name" placeholder="Full Name ">
+            </div>
+
+            <div class="wrap-inputs bg1 rs1-wrap-inputs">
+                <span class="label-inputs">Emergency Contact Phone Number</span>
+                <input class="inputs" id="emergencyNumber" type="PhoneNumber" name="PhoneNumber" placeholder="Enter Your Phone Number ">
+            </div>
+
+
+            <div class="container-followup-form-btn">
+                <button class="followup-form-btn"  id = "followUpButton">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/animsition/js/animsition.min.js"></script>
+<script src="lib/bootstrap/js/popper.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/select2/select2.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
